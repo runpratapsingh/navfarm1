@@ -92,7 +92,7 @@ export default function Step1Profile({ onSubmit, isSubmitting, initialData }: St
     onSubmit(formData);
   };
 
-  const backendUrl = process.env.NEXT_PUBLIC_API_URL?.replace('/api/v1', '') || 'http://localhost:2877';
+  const backendUrl = process.env.NEXT_PUBLIC_API_URL?.replace('/api/v1', '') || 'https://navfarm1-2.onrender.com';
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">

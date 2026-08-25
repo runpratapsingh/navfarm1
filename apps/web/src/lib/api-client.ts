@@ -1,5 +1,5 @@
 export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:2877/api/v1';
+  process.env.NEXT_PUBLIC_API_URL || 'https://navfarm1-2.onrender.com/api/v1';
 
 export const AUTH_STORAGE = {
   user: 'navfarm_auth_user',
@@ -96,7 +96,7 @@ export async function apiRequest<T>(path: string, options: ApiOptions = {}): Pro
   if (token) headers.set('Authorization', `Bearer ${token}`);
   if (tenantId) headers.set('x-tenant-id', tenantId);
   const activeCompanyId = stored('active_company_id');
-  if (activeCompanyId) headers.set('x-active-company-id', activeCompanyId);
+  if (activeCompanyId) headers.set('x-company-id', activeCompanyId);
 
   const response = await fetch(`${API_BASE_URL}${path}`, {
     ...init,

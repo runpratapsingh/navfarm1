@@ -60,6 +60,7 @@ async function bootstrap() {
       'Authorization',
       'x-tenant-id',
       'x-company-id',
+      'x-active-company-id',
       'Origin',
       'X-Requested-With',
     ],
